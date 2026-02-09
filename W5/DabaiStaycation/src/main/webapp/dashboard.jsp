@@ -1,3 +1,9 @@
+<%
+if (session.getAttribute("namaPengguna")==null){
+	response.sendRedirect("login.jsp");
+}
+String pengguna = (String) session.getAttribute("namaPengguna");
+%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,6 +18,7 @@
   <a href="login.jsp" style=" text-decoration: none; color: white; background-color: #333; ">Login</a>
   <a href="#about" style=" text-decoration: none; color: white; background-color: #333;">About</a>
 </nav>
+<h2>Welcome to DabaiStaycation, <%=pengguna %></h2>
 <h3>This is a dashboard</h3>
 </body>
 </html>

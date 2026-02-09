@@ -8,6 +8,7 @@ password = request.getParameter("katalaluan");
 String errorMsg = "";
 
 if("root".equals(username) && "root123".equals(password)){
+	session.setAttribute("namaPengguna", username);
 	response.sendRedirect("dashboard.jsp");
 } else {
 errorMsg = "Wrong Username and Password";	
