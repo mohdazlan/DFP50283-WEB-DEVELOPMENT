@@ -1,0 +1,19 @@
+# Eclipse metadata
+.metadata/
+.project
+.classpath
+.settings/
+
+# Build folders
+bin/
+build/
+target/
+
+# Tomcat / Server config
+Servers/
+.recommenders/
+RemoteSystemsTempFiles/
+
+# OS files
+Thumbs.db
+.DS_Store
