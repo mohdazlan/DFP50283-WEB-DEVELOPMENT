@@ -7,6 +7,11 @@
 <title>Dabai Staycation| Home</title>
 </head>
 <body>
+<nav style="display: flex; flex-direction: column; width: 200px; ">
+  <a href="index.jsp" style=" text-decoration: none; color: white; background-color: #333;">Home</a>
+  <a href="login.jsp" style=" text-decoration: none; color: white; background-color: #333; ">Login</a>
+  <a href="#about" style=" text-decoration: none; color: white; background-color: #333;">About</a>
+</nav>
 <img src="img/header.png" height="100">
 <h1>A Mansion of Borneo Charm</h1>
 <p>Welcome to Dabai Staycation, a luxurious homestay nestled in the heart of Mukah, Sarawak. Prepare to be captivated by our stunning mansion, designed with a distinct Borneo vibe, offering an unparalleled 5-star experience.</p>
