@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%
-	String drinks[] = { "Latte", "Mocha", "Matcha", "Espresso" };
+	String drinks[] = { "Latte", "Americano","Lemonade","Tea","Mocha", "Matcha", "Espresso" };
 	Random rand = new Random();
 	String drink = drinks[rand.nextInt(drinks.length)];
 	String minuman = drinks[1];
@@ -21,7 +21,7 @@
 		//1. change the scripts to accomadate the loop
 		//2. change so that the text will be red
 	%>
-	<p>Promo <%=drinks[i]%>: -- Enjoy your drink</p>
+	<p style="color: red;">Promo <%=i+1 %> <%=drinks[i]%>: -- Enjoy your drink</p>
 	<%
 	}
 	%>
