@@ -11,10 +11,13 @@
 String validUser = "root";
 String passString = "pass";
 
+String validUser2 = "student";
+String passString2 = "katalaluan";
+
 String user = request.getParameter("username");
 String pass = request.getParameter("password");
 
-if(user.equals(validUser) && pass.equals(passString)){
+if((user.equals(validUser) && pass.equals(passString)) || ((user.equals(validUser2) && pass.equals(passString2)))){
 	response.sendRedirect("home.jsp");
 } else {
 	response.sendRedirect("login.jsp");
