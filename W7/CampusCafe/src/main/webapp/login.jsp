@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+String error = request.getParameter("error");
+if(error!= null){
+%>
+<p>Invalid login</p>
+<%} %>
 <form action="processLogin.jsp" method="post">
     <label>Username:</label>
     <input type="text" name="username" required /><br/><br/>

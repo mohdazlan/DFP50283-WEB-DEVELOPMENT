@@ -18,9 +18,10 @@ String user = request.getParameter("username");
 String pass = request.getParameter("password");
 
 if((user.equals(validUser) && pass.equals(passString)) || ((user.equals(validUser2) && pass.equals(passString2)))){
+	session.setAttribute("name", user);
 	response.sendRedirect("home.jsp");
 } else {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("login.jsp?error=1");
 }
 %>
 </body>

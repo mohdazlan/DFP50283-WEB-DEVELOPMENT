@@ -13,6 +13,8 @@
 	Random rand = new Random();
 	String drink = drinks[rand.nextInt(drinks.length)];
 	String minuman = drinks[1];
+	
+	String name = (String) session.getAttribute("name");
 	%>
 	<%=drink%>
 	<p><%=minuman%></p>
@@ -25,5 +27,7 @@
 	<%
 	}
 	%>
+	
+	<%=name%>
 </body>
 </html>

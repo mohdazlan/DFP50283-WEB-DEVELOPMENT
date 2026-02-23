@@ -7,11 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%String user = request.getParameter("user");
-if(user == null || user == ""){
-	user = "Guest";
-}
+<%
+//String user = request.getParameter("user");
+//if(user == null || user == ""){
+//	user = "Guest";
+//}
+
+String name = (String) session.getAttribute("name");
 %>
-<%= user %>
+
+<%= name %>
+<a href="index.jsp">Laman Utama</a>
 </body>
 </html>
