@@ -16,7 +16,7 @@ String pengguna = (String) session.getAttribute("namaPengguna");
 <nav style="display: flex; flex-direction: column; width: 200px; ">
   <a href="index.jsp" style=" text-decoration: none; color: white; background-color: #333;">Home</a>
   <a href="login.jsp" style=" text-decoration: none; color: white; background-color: #333; ">Login</a>
-  <a href="#about" style=" text-decoration: none; color: white; background-color: #333;">About</a>
+  <a href="logout" style=" text-decoration: none; color: white; background-color: #333;">Logout</a>
 </nav>
 <h2>Welcome to DabaiStaycation, <%=pengguna %></h2>
 <h3>This is a dashboard</h3>
