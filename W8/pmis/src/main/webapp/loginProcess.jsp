@@ -24,7 +24,7 @@ ResultSet rs = ps.executeQuery();
 if(rs.next()){
 	response.sendRedirect("dashboard.jsp");
 } else {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("login.jsp?error=1");
 }
 
 rs.close();

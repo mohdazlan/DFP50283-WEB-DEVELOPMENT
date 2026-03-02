@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% String ralat = request.getParameter("error"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,9 @@
 <title>PMIS | Login</title>
 </head>
 <body>
+<% if("1".equals(ralat)){ %>
+<p style="color:red">Invalid username or password</p>
+<% }%>
  <h2>User Login</h2>
   <form action="loginProcess.jsp" method="post">
     <label>Username:</label>
