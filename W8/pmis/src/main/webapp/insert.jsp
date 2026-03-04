@@ -18,6 +18,7 @@ ResultSet rsHasil = stmt.executeQuery("SELECT * FROM pmis.roles;");
 %>
 <body>
 	<h2>PMIS | Insert User</h2>
+	<img src="img/hhp.png">
 	<form action="insertProcess.jsp" method="post">
 		<label>Username:</label> <input type="text" name="username" required /><br />
 		<label>Password:</label> <input type="password" name="password"
@@ -39,3 +40,8 @@ ResultSet rsHasil = stmt.executeQuery("SELECT * FROM pmis.roles;");
 	<a href="dashboard.jsp">Back to Dashboard</a>
 </body>
 </html>
+<%
+rsHasil.close();
+stmt.close();
+con.close();
+%>
