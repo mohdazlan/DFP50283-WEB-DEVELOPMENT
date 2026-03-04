@@ -18,5 +18,9 @@ String perananpengguna = (String) session.getAttribute("peranan");
 <h2>Dashboard</h2>
 Selamat datang :: <%= namapengguna %> (<%= perananpengguna %>)<br>
  Tarikh Akhir Login Pada :: <%= new SimpleDateFormat("dd MMMM yyyy").format(new Date()) %>
+ 
+ <% if("staff".equals(perananpengguna)) { %>
+ <img src="img/hhp.png">
+ <%} %>
 </body>
 </html>
