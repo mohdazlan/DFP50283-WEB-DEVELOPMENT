@@ -22,6 +22,8 @@ ps.setString(2, password);
 
 ResultSet rs = ps.executeQuery();
 if(rs.next()){
+	session.setAttribute("namapengguna", rs.getString("fullname"));
+	session.setAttribute("peranan", rs.getString("name"));
 	response.sendRedirect("dashboard.jsp");
 } else {
 	response.sendRedirect("login.jsp?error=1");
