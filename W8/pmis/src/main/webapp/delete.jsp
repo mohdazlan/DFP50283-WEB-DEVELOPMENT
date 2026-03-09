@@ -15,27 +15,31 @@
 %>
 <body>
 	<h2>Edit User</h2>
-	<table>
+	<table border="1">
 		<tr>
 			<th>ID</th>
 			<th>Nama</th>
 			<th>Peranan</th>
+			<th>Padam</th>
+			<th>Ubahsuai</th>
 		</tr>
 		<%
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pmis", "root", "");
 		Statement stmt = con.createStatement();
 		ResultSet rs = stmt.executeQuery(
-				"SELECT users.id as id,username as nama,roles.name as peranan  FROM pmis.users	JOIN pmis.roles on users.role_id = roles.id;");
+				"SELECT users.id as id,username as nama,roles.name as peranan  FROM pmis.users	JOIN pmis.roles on users.role_id = roles.id order by nama;");
 		while (rs.next()) {
 		%>
 		<tr>
 			<td><%=rs.getInt("id")%></td>
 			<td><%=rs.getString("nama")%></td>
 			<td><%=rs.getString("peranan")%></td>
+			<td><a href="delete.jsp?id=<%=rs.getInt("id")%>">Padam</a></td>
+			<td><a href="edit.jsp?id=<%=rs.getInt("id")%>">Kemaskini</a></td>
 		</tr>
 		<%
-		}
+		} con.close();
 		%>
 	</table>
 </body>
