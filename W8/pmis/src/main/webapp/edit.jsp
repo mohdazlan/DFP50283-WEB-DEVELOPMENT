@@ -29,8 +29,27 @@ if(rs.next()){
 
 %>
 <form action="">
-<input type="text" value=<%=uID %>><input type="text" value=<%=uName %>><input type="text" value=<%=uRoleID %>>
-<input type="submit" value="kemaskini">
+ID:<input type="text" value=<%=uID %>><br>Username:<input type="text" value=<%=uName %>>
+<br>Role:<input type="text" value=<%=uRoleID %>>
+<select>
+ <% 
+ String roleSQL = "SELECT * FROM roles";
+ PreparedStatement rolePS = con.prepareStatement(roleSQL);
+ ResultSet roleRS = rolePS.executeQuery();
+ while(roleRS.next()){
+	 int roleID = roleRS.getInt("id");
+	 String roleName = roleRS.getString("name");
+	 String isSelected = "";
+	 if(roleID == uRoleID) {
+		 isSelected = "selected";
+	 }
+ %>
+  <option value="<%= roleID %>" <%= isSelected %>>
+  <%=roleName %>
+  </option>
+ <%} %>
+</select>
+<br><input type="submit" value="kemaskini">
 </form>
 </body>
 </html>
