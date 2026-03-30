@@ -28,10 +28,10 @@ if(rs.next()){
 }
 
 %>
-<form action="">
-ID:<input type="text" value=<%=uID %>><br>Username:<input type="text" value=<%=uName %>>
-<br>Role:<input type="text" value=<%=uRoleID %>>
-<select>
+<form action="update.jsp" method="post">
+<input type="hidden" name="id" value=<%=uID %>><br>Username:<input name="username" type="text" value=<%=uName %>>
+<br>Role:<input type="hidden" value=<%=uRoleID %>>
+<select name="role_id">
  <% 
  String roleSQL = "SELECT * FROM roles";
  PreparedStatement rolePS = con.prepareStatement(roleSQL);
