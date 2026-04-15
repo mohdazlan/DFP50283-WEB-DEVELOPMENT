@@ -8,5 +8,13 @@
 </head>
 <body>
 Very Secret
+
+<%if (request.isUserInRole("admin")){ %>
+Admin a secret
+<%} %>
+
+<%if (request.isUserInRole("user")){ %>
+Nothing Here
+<%} %>
 </body>
 </html>

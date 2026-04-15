@@ -7,6 +7,6 @@
 <title>HRDF | Secure</title>
 </head>
 <body>
-
+<h1>Welcome, <%=request.getRemoteUser() %></h1>
 </body>
 </html>
