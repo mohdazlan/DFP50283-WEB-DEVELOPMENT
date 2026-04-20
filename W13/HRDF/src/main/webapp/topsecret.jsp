@@ -7,7 +7,7 @@
 <title>HRDF | Top Secret</title>
 </head>
 <body>
-Very Secret
+<h1>Good day <%= request.getRemoteUser() %></h1>
 
 <%if (request.isUserInRole("admin")){ %>
 Admin a secret
@@ -16,5 +16,7 @@ Admin a secret
 <%if (request.isUserInRole("user")){ %>
 Nothing Here
 <%} %>
+
+<p><a href="logout.jsp">Log Out</a></p>
 </body>
 </html>
