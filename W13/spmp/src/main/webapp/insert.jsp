@@ -16,7 +16,7 @@ String full_name = request.getParameter("fullname");
 String phone = request.getParameter("phonenumber");
 String address = request.getParameter("address");
 
-String DB_URL="jdbc:mysql://localhost:3306/pmu_students";
+String DB_URL="jdbc:mysql://localhost:3306/spmp_db";
 Class.forName("com.mysql.cj.jdbc.Driver");
 
 Connection conn = DriverManager.getConnection(DB_URL,"root","");
